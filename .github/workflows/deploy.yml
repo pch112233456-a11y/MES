@@ -10,21 +10,16 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./frontend
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Check files
+        run: ls -la && ls -la frontend
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -33,9 +28,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./frontend
 
       - name: Build
         run: npm run build
+        working-directory: ./frontend
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -43,11 +40,11 @@ jobs:
           path: ./frontend/dist
 
   deploy:
-    environment:
-      name: github-pages
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
 
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: actions/deploy-pages@v4
