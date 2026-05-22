@@ -1,0 +1,19 @@
+process_name,quantity,wait_time,wip_count,machine_utilization
+자재 투입 (Material Intake),500,4.5,2.1,38.0
+자재 투입 (Material Intake),500,5.5,1.9,42.0
+자재 투입 (Material Intake),500,5.0,2.0,40.0
+1차 정밀 가공 (CNC Machining),400,14.0,3.8,68.0
+1차 정밀 가공 (CNC Machining),400,16.0,4.2,72.0
+1차 정밀 가공 (CNC Machining),400,15.0,4.0,70.0
+열처리 공정 (Heat Treatment),120,78.0,22.0,96.0
+열처리 공정 (Heat Treatment),110,82.0,25.0,94.0
+열처리 공정 (Heat Treatment),120,80.0,23.0,95.0
+2차 표면 처리 (Surface Treatment),320,28.0,8.0,92.0
+2차 표면 처리 (Surface Treatment),330,32.0,9.0,90.0
+2차 표면 처리 (Surface Treatment),310,30.0,8.5,91.0
+품질 검사 (QC Inspection),360,11.0,3.2,56.0
+품질 검사 (QC Inspection),370,9.0,2.8,54.0
+품질 검사 (QC Inspection),370,10.0,3.0,55.0
+완제품 포장 (Packaging),360,6.5,1.6,46.0
+완제품 포장 (Packaging),370,5.5,1.4,44.0
+완제품 포장 (Packaging),370,6.0,1.5,45.0
